@@ -1,0 +1,13 @@
+plugins:
+  zhuzhengguang/demo:
+  - size
+  - config-updater
+config_updater:
+  maps:
+    # Update the config configmap whenever config.yaml changes
+    prow/config.yaml:
+      name: config
+    # Update the plugin configmap whenever plugins.yaml changes
+    prow/plugins.yaml:
+      name: plugin
+      
