@@ -2,6 +2,7 @@ plugins:
   zhuzhengguang/demo:
   - size
   - config-updater
+  - approve
 config_updater:
   maps:
     # Update the config configmap whenever config.yaml changes
@@ -11,3 +12,8 @@ config_updater:
     prow/plugins.yaml:
       name: plugin
       
+approve:
+- repos:
+  - zhuzhengguang/demo
+  require_self_approval: false
+  lgtm_acts_as_approve: true
