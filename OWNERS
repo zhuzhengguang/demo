@@ -1,0 +1,24 @@
+# See the OWNERS docs at https://go.k8s.io/owners
+
+filters:
+  ".*":
+    reviewers:
+      - zgfh
+      - zhuzhengguang
+    approvers:
+      - zgfh
+      - zhuzhengguang
+      
+
+  # Bazel build infrastructure changes often touch files throughout the tree
+  "\\.bzl$":
+    reviewers:
+      - zgfh
+      - zhuzhengguang
+    approvers:
+      - zgfh
+      - zhuzhengguang
+  "BUILD(\\.bazel)?$":
+    approvers:
+      - zgfh
+      - zhuzhengguang
